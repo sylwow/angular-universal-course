@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {HomeComponent} from "./home/home.component";
-import {CourseComponent} from "./course/course.component";
-import {CourseResolver} from "./services/course.resolver";
-import {AboutComponent} from './about/about.component';
+import { HomeComponent } from "./home/home.component";
+import { CourseComponent } from "./course/course.component";
+import { CourseResolver } from "./services/course.resolver";
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   {
@@ -13,6 +13,10 @@ const routes: Routes = [
   },
   {
     path: 'about',
+    component: AboutComponent
+  },
+  {
+    path: 'about-v2',
     component: AboutComponent
   },
   {
@@ -32,7 +36,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, {
     initialNavigation: 'enabled',
     relativeLinkResolution: 'legacy'
-})],
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
